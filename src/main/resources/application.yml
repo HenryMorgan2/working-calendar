@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+    datasource:
+      url: jdbc:postgresql://localhost:5432/working-calendar
+      username: working-calendar-rw
+      password: example
+      driver-class-name: org.postgresql.Driver
+      hikari:
+        schema: public
+
+    liquibase:
+      change-log: classpath:db/changelog/changelog.xml
+      default-schema: public
+      enabled: true
