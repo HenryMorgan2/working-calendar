@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <!-- Добавим 1 книгу  -->
+    <changeSet id="insert-into-book" author="mediaSoft">
+        <preConditions onFail="WARN">
+            <sqlCheck expectedResult="4">select count(*) from genre</sqlCheck>
+        </preConditions>
+        <comment>Проверяем что в нашей таблице жанры есть 4 жанра перед добавлением книги</comment>
+        <insert tableName="book">
+            <column name="title" value="Капитанская дочка"/>
+            <column name="genre_id" value="0"/>
+            <column name="price" value="1200"/>
+            <column name="amount" value="14"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

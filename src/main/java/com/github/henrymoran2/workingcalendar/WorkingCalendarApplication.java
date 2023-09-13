@@ -8,6 +8,7 @@ public class WorkingCalendarApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WorkingCalendarApplication.class, args);
+		System.out.println("Hello world!");
 	}
 
 }
