@@ -4,21 +4,21 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
-    <changeSet id="create_table_book" author="mediaSoft">
-        <createTable tableName="book">
-            <column autoIncrement="true" name="book_id" type="bigint">
+
+    <changeSet id="tag-create_table_working-calendar" author="danil">
+        <tagDatabase  tag="create-table-working-calendar"/>
+    </changeSet>
+
+    <changeSet id="create_table_working-calendar" author="danil">
+
+        <createTable tableName="working_calendar">
+            <column autoIncrement="true" name="id" type="bigint">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="title" type="varchar(100)">
+            <column name="calendar_date" type="date">
                 <constraints nullable="false"/>
             </column>
-            <column name="genre_id" type="bigint">
-                <constraints nullable="false"/>
-            </column>
-            <column name="price" type="double">
-                <constraints nullable="false"/>
-            </column>
-            <column name="amount" type="integer">
+            <column name="is_holiday" type="boolean">
                 <constraints nullable="false"/>
             </column>
         </createTable>

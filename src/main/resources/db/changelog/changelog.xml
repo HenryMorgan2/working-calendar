@@ -5,9 +5,9 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-    <include file="create-changeset-book-table.xml" relativeToChangelogFile="true"/>
-    <include file="create-changeset-genre-table.xml" relativeToChangelogFile="true"/>
-<!--    <include file="changeset-genre-table.xml" relativeToChangelogFile="true"/>-->
-    <include file="insert-changeset-genre-table.xml" relativeToChangelogFile="true"/>
-    <include file="insert-changeset-book-table.xml" relativeToChangelogFile="true"/>
+<!--    <include file="create-table-working-calendar-new.xml" relativeToChangelogFile="true"/>-->
+<!--    <include file="rollback-wk-calendar.xml" relativeToChangelogFile="true"/>-->
+    <include file="insert-working-calendar-table.sql" relativeToChangelogFile="true"/>
+<!--    <include file="drop-table-working_calendar.xml" relativeToChangelogFile="true"/>-->
+
 </databaseChangeLog>
