@@ -7,19 +7,20 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
 @ExtendWith(MockitoExtension.class)
-class WorkingCalendarServiceTest {
+public class WorkingCalendarServiceTest {
 
-//    @InjectMocks
-//    private WorkingCalendarService;
-//
-//    @Mock
-//    private WorkingCalendarResponceDTO;
-//
-//    @Test
-//    public void getNonWorkingCalendar(){
+    @InjectMocks
+    private WorkingCalendarService workingCalendarService;
 
-//
+    @Mock
+    private WorkingCalendarResponceDTO workingCalendarResponceDTO;
+
+    @Test
+    public void getNonWorkingCalendar(){
+
+
 //        WorkingCalendarService service = new WorkingCalendarService(workingCalendarResponceDTOMock);
 //
 //        LocalDate startDate = LocalDate.parse("2023-10-13", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
@@ -33,7 +34,7 @@ class WorkingCalendarServiceTest {
 //
 //        Assertions.assertArrayEquals(left, nonWorkingDays.get("nonWorkingDays"));
 
-//    }
+    }
 
 
 }

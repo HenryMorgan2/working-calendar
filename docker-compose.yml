@@ -29,4 +29,15 @@ services:
 
 volumes:
   pgdata:
+    driver: local
+    driver_opts:
+        type: none
+        o: bind
+        device: ./docker/pgdata
+
   pgadmin:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./docker/pgadmin

@@ -1,23 +1,24 @@
 package com.github.henrymoran2.workingcalendar.service;
 
-import com.github.henrymoran2.workingcalendar.dto.WorkingCalendarResponceDTO;
+import com.github.henrymoran2.workingcalendar.entity.WorkingCalendarEntity;
+import com.github.henrymoran2.workingcalendar.repository.WorkingCalendarRepository;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import java.time.LocalDate;
-import java.util.HashMap;
 import java.util.List;
 
-@Component
+@Service
 @Data
 public class WorkingCalendarService {
 
     @Autowired
-    private final WorkingCalendarResponceDTO workingCalendarResponceDTO;
+    private final WorkingCalendarRepository workingCalendarRepository;
 
+    public List<WorkingCalendarEntity> getNonWorkingCalendar(LocalDate startDate, LocalDate endDate){
 
-    public HashMap<String, List<LocalDate>> getNonWorkingCalendar(LocalDate startDate, LocalDate endDate, boolean isHoliday){
-        return  workingCalendarResponceDTO.getNonWorkingCalendar(startDate, endDate, isHoliday);
+       return  workingCalendarRepository.findByCalendarDateBetweenAndIsHoliday(startDate, endDate, true);
     }
 
 }
