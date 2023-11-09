@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class WorkingCalendarController {
 
     private final WorkingCalendarConverter workingCalendarConverter;
-    public final WorkingCalendarService workingCalendarService;
+    private final WorkingCalendarService workingCalendarService;
 
     @ResponseBody
     @GetMapping("/non-working-days")

@@ -3,7 +3,6 @@ package com.github.henrymoran2.workingcalendar.service;
 import com.github.henrymoran2.workingcalendar.entity.WorkingCalendarEntity;
 import com.github.henrymoran2.workingcalendar.repository.WorkingCalendarRepository;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
