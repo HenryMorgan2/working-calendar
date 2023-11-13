@@ -1,6 +1,18 @@
 version: '3.1'
 
 services:
+  working-calendar:
+    image: henrymorgan2/working-calendar:1.0.0
+    container_name: working-calendar_container
+    restart: always
+    depends_on:
+        - database
+    environment:
+        DATABASE_URL: "jdbc:postgresql://database:5432/working-calendar"
+        POSTGRES_USER: "${POSTGRES_USER}"
+        POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}"
+    ports:
+      - "8080:8080"
 
   database:
     image: postgres:15.4
