@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+    datasource:
+      url: ${DATABASE_URL}
+      username: ${POSTGRES_USER}
+      password: ${POSTGRES_PASSWORD}
+      driver-class-name: org.postgresql.Driver
+      hikari:
+        schema: public
+
+    liquibase:
+      change-log: classpath:db/changelog/changelog.xml
+      default-schema: public
+      enabled: true

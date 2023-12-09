@@ -15,6 +15,11 @@
 	<description>production calendar</description>
 	<properties>
 		<java.version>17</java.version>
+		<junit.jupiter.version>5.10.0</junit.jupiter.version>
+		<junit.platform.version>1.10.0</junit.platform.version>
+		<postgresql.version>42.6.0</postgresql.version>
+		<mockito-junit-jupiter.version>5.3.1</mockito-junit-jupiter.version>
+		<commons-io.version>2.15.0</commons-io.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -29,6 +34,11 @@
 			<groupId>org.liquibase</groupId>
 			<artifactId>liquibase-core</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -40,9 +50,27 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<version>${junit.jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<version>${mockito-junit-jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>
+		<finalName>working-calendar</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
